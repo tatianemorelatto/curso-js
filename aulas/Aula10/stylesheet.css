@@ -1,0 +1,15 @@
+div#area {
+    font: normal 20pt Arial;
+    background: rgb(42, 139, 42);
+    /*cor do fundo */
+    color: white;
+    /*cor da fonte */
+    width: 200px;
+    /*altura */
+    height: 200px;
+    /*comprimento */
+    line-height: 200px;
+    /*para o texto ficar no meio (apenas na altura) */
+    text-align: center;
+    /*para o texto ficar no centro(meio da pagina) */
+}

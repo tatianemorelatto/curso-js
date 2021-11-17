@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 20pt Arial;
+            /* comentario em CSS */
+        }
+        
+        h1 {
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Olá, mundo!</h1>
+    <!-- Comentario no HTML funciona assim-->
+    <p>Já me livrei da maldição!</p>
+    <script>
+        var n1 = Number(window.prompt('Digite um número: ')) //o prompt retorna uma string, porem adicionando o number ele automaticamente já converte o dado.
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é = ${s}`)
+
+        /* no JS ele trata o sinal de + como soma e como concatenação ao mesmo tempo
+
+        number + numer = vai somar 
+        string + string = vai concatenar
+
+         no caso acima ele vai concatenar justamente pelo retorno do prompt que gera uma string 
+        
+        Nesse caso é necessário converter de string para number 
+
+        Number.parseInt(n) ou parseInt(n) = convert para inteiro
+        Number.parseFloat(n) ou parseFloat(n) = converte para real 
+        Ou usamos só o Number(n) = ele converte sozinho  */
+    </script>
+
+</body>
+
+
+</html>

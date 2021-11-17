@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conhecendo o DOM</title>
+    <style>
+        body {
+            /* fazer dentro do body significa que estamos mexendo no corpo do site */
+            background-color: rgba(48, 51, 252, 0.801);
+            /* fundo do site*/
+            color: white;
+            /* cor da fonte */
+            font: normal 18pt Arial;
+            /* fonte do site */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p> Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id='msg'>Clique em mim</div>
+    <!-- podemos criar a div e inserindo um id para ela dessa forma, não é necessário inserir id em cada div, a não ser que você queira chamar essa div em algum momento em especifico-->
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0] // ele vai procurar o elemento P, podemos definir qual dos elementos P ele vai buscar inserindo o indice entre []... P nesse caso é o <p> paragrafro
+            // posso colocar no lugar de p, div, h1, entre outros elementos 
+        document.write(p1.innerText) // aqui ele vai mostrar o conteudo do primeiro <p> que eu busquei
+
+        //Para selecionar por ID
+        var d = window.document.getElementById('msg')
+
+        // ATUALMENTE USAMOS MAIS O querySelector para essas mesmas funções acima
+
+        var i = window.document.querySelector('div#msg') // # para id e . para classe
+        i.style.color = 'Yellow'
+
+        // É mais pratico quando estamos fazendo alterações rápidas no site
+    </script>
+</body>
+
+</html>

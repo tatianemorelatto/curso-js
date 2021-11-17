@@ -1,0 +1,33 @@
+body {
+    background: rgba(93, 93, 255, 0.938);
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    /* cor do fundo */
+    border-radius: 10px;
+    /*para o quadrado ficar meio arredondado */
+    padding: 10px;
+    /* entendo como o tamanho das bordas cima e baixo*/
+    width: 500px;
+    /* lagura*/
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.356);
+    /* tipo uma sombrinha no quadrado */
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+img {
+    border-radius: 50%;
+}

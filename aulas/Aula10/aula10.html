@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen">
+    <!-- vinculando um arquivo css externo, nesse caso todo o css vai ser puxado desta outra pagina -->
+</head>
+
+<body>
+    <div id='area' onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"></div>
+    <!-- criando a função onclick e outras através do HTML-->
+    Interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+            //eventos dentro do JS
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+            // ou podemos chamar os eventos pelo javascript direto dessa forma axcima
+            //TEMOS QUE USAR UM OU OUTRO 
+
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!'
+            a.style.background = 'blue'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+
+</html>

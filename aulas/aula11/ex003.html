@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+
+<body>
+    <h1>SISTEMA DE MULTA</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <!-- Foi criado um espaço para o usuario digitar o número-->
+    <input type="button" value="Verificar" onclick="calcular()">
+    <!-- Botão enter para verificar o conteudo que o usuario preencheu, já foi criado um evento do tipo onclick-->
+    <div id='res'>
+
+    </div>
+    <!-- mostrar o resultado na div-->
+    <!-- ESSA PARTE DE CIMA É ONDE O USUARIO VAI INSERIR AS INFORMAÇÕES -->
+    <script>
+        // ESSA PARTE É O JAVASCRIPT ONDE PEGAREMOS O QUE O USUARIO ESCREVEU E FAREMOS A CONVERSÃO PARA JAVASCRIPT
+
+
+        function calcular() {
+            var txtv = window.document.getElementById('txtvel') // vai pegar o que o usuario digitou e armazenar em txtv
+            var res = window.document.querySelector('div#res')
+            var vel = Number(txtv.value) // vai pegar o que está armazenado em txtv e mudar o tipo para number e salvar na variavel vel
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
+            if (vel > 80) {
+                res.innerHTML += (`Você ultrapassou a velocidade máxima de ${vel}Km/H`)
+                res.innerHTML += (`<p>Você foi MULTADO</p>`)
+            } else {
+                res.innerHTML += (`Dentro da velocidade permitida!`)
+            }
+            res.innerHTML += `<p> Dirija sempre com o cinto de segurança! </p>` // o += está concatenando para que essa mensagem também seja exibida, se colocarmos só com o = o conteudo da primeira linha será apagado e só mostrará o segundo
+        }
+    </script>
+</body>
+
+</html>
